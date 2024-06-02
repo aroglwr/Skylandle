@@ -20,3 +20,5 @@ Simply keep `update.py` running to automatically update the daily answer.
 
 ## License
 This program is licensed under the MIT License.
+
+Logo created by myself.
