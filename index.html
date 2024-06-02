@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+    <head>
+        <link rel="stylesheet", href="main.css">
+        <link rel="icon", 
+        type="image/png" 
+        href="assets/favicon.png"/>
+        <title>Skylandle</title>
+        <body>
+            <div class="header">
+                <div class="title">
+                    <a href=""><img src="assets/title.png" alt="Skylandle"></a>
+                </div>
+                
+            </div>
+            <div class="gameWindow">
+                    <div id="countdown"></div>
+                    
+                    <!--Make sure the form has the autocomplete function switched off:-->
+                    <p onclick="playGame()" id="play" class="button">Play</p>
+                    <form autocomplete="off" onsubmit="submitGuess(event)" id="form">
+                        <div class="autocomplete" style="width:450px;">
+                          <input id="guessInput" type="text" name="nameGuess" placeholder="Type Skylander name..." onkeydown="handleEnterKey(event)">
+                        
+                        </div>
+                        <input type="submit" value="Submit">
+                    </form>
+                    <div class="result", id="result">
+                        <div id="resultText"><p></p><p id="statLink" class="button" onclick="copyStats()">Copy stats</p></div>
+                        
+                        <table id="resultTable">
+                            <tr>
+                                <th>Guess</th>
+                                <th>Element</th>
+                                <th>Gender</th>
+                                <th>Species</th>
+                                <th>World</th>
+                                <th>Role</th>
+                                <th>First Appearance</th>
+                             </tr>
+                        </table>
+                    </div>
+            </div>
+
+            <div class="infoModal" id="iModal">
+                <div class="infoContent">
+                    <span class="close" id="iClose">&cross;</span>
+                    <div class="infoTitle">About</div>
+                    <div class="infoText">
+                        Every day a Skylander will be chosen at random and it is your job to guess it! With each guess you will get traits that they share with the correct answer until you get it right!
+                        Note: this game does not include Eon's Elite variants, minis, alternative versions, lost island exclusives or magic items.
+                    </div>
+                    <div class="infoTitle">Details</div>
+                    <div class="infoText">
+                        This is a goofy game inspired by <a href="https://loldle.net", target="_blank", rel="noopener noreferrer">LoLdle</a>, <a href="https://minecraftle.zachmanson.com/, target="_blank", rel="noopener noreferrer">Minecraftle</a> and of course Wordle. 
+                        You can view the project on <a href="https://github.com/aroglwr", target="_blank", rel="noopener noreferrer">GitHub</a>.
+                        The data for each character is gathered from the <a href="https://skylanders.fandom.com", target="_blank", rel="noopener noreferrer">Fandom</a> page by me, the script I used can also be found on the GitHub page.
+                        <br>
+                    </div>
+                    <div class="infoTitle">Privacy</div>
+                    <div class="infoText">
+                        There are no trackers or ads on this website and all hyperlinks are written such that the website they direct to does not hear from me. I use a single (1) cookie to keep guesses after refresh (you can check this in your browser's web tools) and are not saved by me.
+                    </div>
+                    
+                    <footer>
+                        developed by aroglwr © 2024
+                        <br>
+                        <code id="footer-legal">background artwork courtesy of <a id="bg-link" href="https://lee-harker-czjl.squarespace.com/798817030644", target="_blank", rel="noopener noreferrer">here</a></code>
+                        <br>
+                        <code id="footer-legal">logo made by me with help from jawg & mr ideas</code>                        </code>
+                        
+
+                    </footer>
+                </div>
+            </div>
+
+            <div class="infoModal" id="cModal">
+                <div class="infoContent">
+                    <span class="close" id="cClose">&cross;</span>
+                    <div class="infoTitle" style="text-align: center;">Contact</div>
+                    <div class="footer">
+                        <ul>
+                            <li>
+                                <a href="https://twitter.com/aroglwr", target="_blank", rel="noopener noreferrer">twitter</a>
+                            </li>
+                            
+                            <li>
+                                <a href="https://github.com/aroglwr", target="_blank", rel="noopener noreferrer">git</a>
+                            </li>
+                            
+                        </ul>
+                        </div>
+                    
+                    
+                </div>
+            </div>
+
+            <div class="footer">
+                <p>aroglwr © 2024</p>
+                <br>
+
+                
+
+                <a id="infoButton">info</a>
+            </div>
+        </body>
+        <script type="text/javascript" src="scripts/modal.js"></script>
+        <script type="module" src="scripts/searchBox.js"></script>
+        <script type="text/javascript" src="scripts/countdownDisplay.js"></script>
+        <script type="text/javascript" src="scripts/playGame.js"></script>
+        <script type="text/javascript" src="scripts/resultTable.js"></script>
+    </head>
+</html>
